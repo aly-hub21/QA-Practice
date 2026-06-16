@@ -1,0 +1,54 @@
+{
+  "info": {
+    "_postman_id": "2f71de57-3ed4-4c0f-bf28-48e856ceff30",
+    "name": "QA Automation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42242085"
+  },
+  "item": [
+    {
+      "name": "https://jsonplaceholder.typicode.com/users",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code 200 hai\", function() {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response mein data hai\", function() {\r",
+              "    pm.response.to.have.body();\r",
+              "});\r",
+              "\r",
+              "pm.test(\"10 users hain response mein\", function() {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.length).to.eql(10);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
