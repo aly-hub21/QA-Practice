@@ -21,6 +21,7 @@ I am a QA Tester practicing manual and API testing.
 ## Tools
 - Postman
 - GitHub
+- Jira
 
 ## Bug Tracking
 Practiced bug tracking in Jira — logged 5 bugs with steps, expected/actual results, and severity.
